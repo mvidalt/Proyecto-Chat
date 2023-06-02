@@ -31,11 +31,13 @@ public class Login extends HttpServlet {
 		User u = new User();
 		u.setMail(mail);
 		u.setPass(pass);
-		
 		if (u.login()) {
 			response.getWriter().append(u.getSession());
+			
+			
 		}else {
 			response.getWriter().append("false");
+			
 		}
 	}
 }

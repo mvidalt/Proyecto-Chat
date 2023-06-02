@@ -28,11 +28,10 @@ public class Friend extends HttpServlet {
 		String mail = request.getParameter("mail");
 		String session = request.getParameter("session");
 		String friendMail = request.getParameter("friend");
-		
+		System.out.print(friendMail);
 		User u = new User();
 		u.setMail(mail);
 		u.setSession(session);
-		
 		String resposta="0";
 		//Codi resposta
 		//0 El Servidor no respon
