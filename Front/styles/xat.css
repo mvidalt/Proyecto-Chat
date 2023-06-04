@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Encabezado */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info span {
+    margin-right: 10px;
+  }
+  
+  .button-logout {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .button-logout:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Formularios */
+  .form-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .input-button-container {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  input[type="email"],
+  input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .friend {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.friend img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.friend:hover {
+    background-color: #222;
+}
+  
+  p#resultado {
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
+  /* Contenedor de chat */
+  #chatContainer {
+    background-image: url('https://media.istockphoto.com/id/1403848173/es/vector/patrón-de-chat-en-línea-vectorial-fondo-de-chat-en-línea-sin-interrupciones.jpg?s=1024x1024&w=is&k=20&c=N_6bNeF_gpmFq43BOdwp0-8OSeQInZCftKN20maO-QA=');
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    background-size: cover;
+    height: 200px; /* Altura fija del contenedor */
+    overflow: auto; /* Crea un scroll cuando el contenido excede la altura */
+    height: 400px;
+  }
+/* Estilos para los mensajes del chat */
+.chat-message {
+    display: flex;
+    flex-direction: column;
+    white-space: pre-wrap;
+  }
+  
+/* Resto de estilos CSS */
+
+.sent {
+    float: right;
+    clear: both;
+    background-color: #dcf8c6; /* Cambia el color de fondo según tus preferencias */
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    max-width: 100%; /* Cambia el valor según tus necesidades */
+}
+
+.received {
+    float: left;
+    clear: both;
+    background-color: #e8e8e8; /* Cambia el color de fondo según tus preferencias */
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    max-width: 100%; /* Cambia el valor según tus necesidades */
+}
+/* Resto de estilos CSS */
+
+  
+  
+
+  
+  /* Estilos para el formulario de seleccionar amigo */
+  label[for="amigo"],
+  select#amigo {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para el formulario de enviar mensaje */
+  input#sms {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  button[name="but"] {
+    background-color: #075e54;
+    color: #ededed;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  button[name="but"]:hover {
+    background-color: #222;
+  }
+  

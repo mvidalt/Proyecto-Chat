@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="../src/register.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/register.css">
     <title>Registro</title>
 </head>
-<body onload="obtenerPaises()">
-    <h1>Registrate</h1>
-    <form onsubmit="return false;">
-        <label for="user">Usuario:</label><br>
-        <input type="text" id="user" name="user" required><br><br>
-        
-        <label for="pass">Contrasenya:</label><br>
-        <input type="password" id="pass" name="pass" required><br><br>
 
-        <label for="pass">Repite la Contrasenya:</label><br>
-        <input type="password" id="pass2" name="pass2" required><br><br>
-        
-        <label for="mail">Email:</label><br>
-        <input type="email" id="mail" name="mail" required><br><br>
-        
-        <select id="codeCountry" required>
-            <option value="" disabled selected>Selecciona un pais</option>
-        </select>
-        <br><br>
-        <button name="but"type="submit" onclick="registre()">Register</button>
-        <button id="login" onclick="window.location.href = 'login.html';">Volver al Login</button>
-        <p id="resultado"></p>
-      </form>
+<body onload="obtenerPaises()">
+    <div class="container">
+        <div class="form-container">
+            <h1>Registrate</h1>
+            <div class="form-content">
+                <form onsubmit="return false;">
+                    <label for="user">Usuario:</label>
+                    <input type="text" id="user" name="user" required>
+
+                    <label for="pass">Contrasenya:</label>
+                    <input type="password" id="pass" name="pass" required>
+
+                    <label for="pass">Repite la Contrasenya:</label>
+                    <input type="password" id="pass2" name="pass2" required>
+
+                    <label for="mail">Email:</label>
+                    <input type="email" id="mail" name="mail" required>
+
+                    <select id="codeCountry" required>
+                        <option value="" disabled selected>Selecciona un pais</option>
+                    </select>
+
+                    <button name="but" type="submit" onclick="registre()">Register</button>
+                    <button id="login" onclick="window.location.href = 'login.html';">Volver al Login</button>
+                    <p id="resultado"></p>
+                </form>
+            </div>
+        </div>
 </body>
+
 </html>

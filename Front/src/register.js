@@ -7,8 +7,8 @@ function registre() {
   
     if (pass !== pass2) {
       // Las contraseñas no coinciden
-      document.getElementById("resultado").innerHTML = 'Las contraseñas no coinciden';
-      return; 
+      alert('Las contraseñas no coinciden');
+      return;
     }
   
     var http = new XMLHttpRequest();
@@ -20,12 +20,12 @@ function registre() {
         if (http.status === 200) {
           // Obtener la respuesta del backend
           var response = http.responseText;
-  
+          
           if (response === "false") {
             // El login no ha sido correcto
-            document.getElementById("resultado").innerHTML = 'Email en uso';
+            alert('Email en uso');
           } else {
-            window.location.href = 'login.html';
+            document.getElementById("resultado").innerHTML = 'Usuario creado correctamente';
           }
         } else {
           // Error en la petición al backend

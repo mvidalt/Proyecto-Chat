@@ -6,23 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="../src/login.js"></script>
+  <link rel="stylesheet" type="text/css" href="../styles/login.css">
   
   <title>Login</title>
 </head>
 
 <body>
-  <h1 class="container">Iniciar Sesión</h1>
-  <div>
-  <form onsubmit="return false;">
-    <label for="mail">Correo</label>
-    <input type="email" id="mail">
-    <label name="pass" for="pass">Contraseña</label>
-    <input type="password" id="pass">
-    <button name="but" type="submit" onclick="send()">Login</button>
-    <button id="alta" onclick="window.location.href = 'register.html';">Registrate</button>
-    <p id="resultado"></p>
-  </form>
-</div>
+  <div class="container">
+    <h1>Iniciar Sesión</h1>
+    <form onsubmit="return false;">
+      <label for="mail">Correo</label>
+      <input type="email" id="mail">
+      <label name="pass" for="pass">Contraseña</label>
+      <input type="password" id="pass">
+      <button name="but" type="submit" onclick="send()">Login</button>
+      <p><b>No tienes cuenta?</b></p>
+      <button id="alta" onclick="window.location.href = 'register.html';">Registrate</button>
+      <p id="resultado"></p>
+    </form>
+  </div>
 </body>
 
 </html>

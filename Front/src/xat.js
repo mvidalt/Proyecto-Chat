@@ -37,6 +37,7 @@ function recibirMensaje() {
                     if (conversacionElement) {
                         var mensaje = document.createElement('p');
                         mensaje.textContent = emisor + ": " + text;
+                        mensaje.classList.add('received');
                         conversacionElement.appendChild(mensaje);
                     }
                 }
@@ -70,14 +71,18 @@ function enviarMensaje() {
             if (xhr.status === 200) {
                 console.log("Mensaje enviado correctamente");
 
-                var emisor = mail; // Obtener el correo del emisor
                 var text = sms; // Obtener el texto del mensaje
 
                 var conversacionElement = document.querySelector('.conversacion[data-amigo="' + receptor + '"]');
                 if (conversacionElement) {
-                    var mensaje = document.createElement('p');
-                    mensaje.textContent = emisor + ": " + text;
-                    conversacionElement.appendChild(mensaje);
+                  var mensaje = document.createElement('p');
+                  mensaje.textContent = 'Tu: ' + text;
+                  mensaje.classList.add('sent');
+                  conversacionElement.appendChild(mensaje);
+                  
+                 
+ 
+                  
                 }
             } else {
                 console.error("Error al enviar el mensaje:", xhr.status);
@@ -88,6 +93,7 @@ function enviarMensaje() {
     var params = "mail=" + encodeURIComponent(mail) + "&session=" + encodeURIComponent(session) + "&receptor=" + encodeURIComponent(receptor) + "&sms=" + encodeURIComponent(sms);
 
     xhr.send(params);
+    document.getElementById("sms").value = "";
 }
 
 function mostrarCorreoUsuario() {

@@ -17,6 +17,7 @@ function send() {
           if (response == "false") {
             // El login no ha sido correcto
             document.getElementById("resultado").innerHTML = 'Login erroneo';
+            alert("login erroneo");
           } else {   // El login ha sido exitoso, obtener el código de sesión
             var sessionCode = response;
   
