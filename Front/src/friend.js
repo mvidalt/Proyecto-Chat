@@ -16,6 +16,7 @@ function añadiramigos() {
                 document.getElementById("resultado").innerHTML = 'El servidor no responde';
             } else if (response == '1') {
                 document.getElementById("resultado").innerHTML = 'Amigo agregado correctamente';
+                document.getElementById("friend").value;
             } else if (response == '2') {
                 document.getElementById("resultado").innerHTML = 'Amigo no encontrado';
             } else if (response == '3') {

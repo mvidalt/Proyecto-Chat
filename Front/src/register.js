@@ -26,6 +26,10 @@ function registre() {
             alert('Email en uso');
           } else {
             document.getElementById("resultado").innerHTML = 'Usuario creado correctamente';
+            document.getElementById("user").value = "";;
+            document.getElementById("mail").value = "";;
+            document.getElementById("pass").value = "";
+            document.getElementById("pass2").value = "";
           }
         } else {
           // Error en la petición al backend
@@ -37,6 +41,7 @@ function registre() {
     var params = "user=" + encodeURIComponent(user) + "&mail=" + encodeURIComponent(mail) + "&pass=" + encodeURIComponent(pass) + "&codeCountry=" + encodeURIComponent(codeCountry);
   
     http.send(params);
+
   }
   
 

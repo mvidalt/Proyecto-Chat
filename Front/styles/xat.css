@@ -3,8 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: rgb(215, 211, 211);
   }
   
+  h1{
+    margin-right: 10px;
+  }
+
   /* Encabezado */
   .header {
     display: flex;
@@ -132,20 +137,26 @@ body {
 
   
   /* Estilos para el formulario de seleccionar amigo */
-  label[for="amigo"],
-  select#amigo {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 10px;
-  }
+/* Estilos para el formulario de seleccionar amigo */
+label[for="amigo"],
+select#amigo,
+input#sms {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+  height: 40px; /* Ajusta la altura según tus necesidades */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+  
   
   /* Estilos para el formulario de enviar mensaje */
   input#sms {
-    width: 100%;
+    width: 50%;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #070707;
     border-radius: 4px;
     margin-top: 10px;
   }

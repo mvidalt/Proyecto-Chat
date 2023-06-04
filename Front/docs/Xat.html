@@ -24,7 +24,7 @@
         <label for="añadiramigo">Añadir amigo</label>
         <div class="input-button-container">
             <input type="email" id="friend">
-            <button type="submit" onclick="añadiramigos()" class="friend">
+            <button type="button" onclick="añadiramigos()" class="friend">
                 <img src="../img/loggin.png" alt="login">
             </button>
         </div>
@@ -32,7 +32,7 @@
     </form>
     <div class="form-container">
         <form>
-            <label for="amigo">A quién le quieres enviar el mensaje?</label>
+            <label for="amigo">Con quien quieres hablar?</label>
             <select id="amigo" required onchange="cambiarConversacion()">
                 <option value="" disabled selected>Selecciona un amigo</option>
             </select>

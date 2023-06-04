@@ -10,8 +10,7 @@ body {
   background-color: #f7f7f7;
   margin: 0;
   padding: 0;
-  background-image: url(https://img.freepik.com/vector-premium/fondo-degradado-azul-cielo-anunciantes-fondo-pantalla-hq-degradado_189959-513.jpg);
-}
+  background-color: rgb(215, 211, 211);}
 
 .container {
   text-align: center;
