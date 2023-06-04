@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,7 +10,6 @@ body {
     margin-right: 10px;
   }
 
-  /* Encabezado */
   .header {
     display: flex;
     justify-content: space-between;
@@ -41,7 +40,7 @@ body {
     background-color: #cc0000;
   }
   
-  /* Formularios */
+
   .form-container {
     margin-top: 20px;
     padding: 20px;
@@ -91,53 +90,47 @@ body {
     font-style: italic;
   }
   
-  /* Contenedor de chat */
+
   #chatContainer {
     background-image: url('https://media.istockphoto.com/id/1403848173/es/vector/patrón-de-chat-en-línea-vectorial-fondo-de-chat-en-línea-sin-interrupciones.jpg?s=1024x1024&w=is&k=20&c=N_6bNeF_gpmFq43BOdwp0-8OSeQInZCftKN20maO-QA=');
     margin-top: 20px;
     padding: 20px;
     background-color: #f0f0f0;
     background-size: cover;
-    height: 200px; /* Altura fija del contenedor */
-    overflow: auto; /* Crea un scroll cuando el contenido excede la altura */
+    height: 200px; 
+    overflow: auto; 
     height: 400px;
   }
-/* Estilos para los mensajes del chat */
+
 .chat-message {
     display: flex;
     flex-direction: column;
     white-space: pre-wrap;
   }
   
-/* Resto de estilos CSS */
+
 
 .sent {
     float: right;
     clear: both;
-    background-color: #dcf8c6; /* Cambia el color de fondo según tus preferencias */
+    background-color: #dcf8c6; 
     padding: 10px;
     border-radius: 10px;
     margin: 5px;
-    max-width: 100%; /* Cambia el valor según tus necesidades */
+    max-width: 100%;
 }
 
 .received {
     float: left;
     clear: both;
-    background-color: #e8e8e8; /* Cambia el color de fondo según tus preferencias */
+    background-color: #e8e8e8; 
     padding: 10px;
     border-radius: 10px;
     margin: 5px;
-    max-width: 100%; /* Cambia el valor según tus necesidades */
+    max-width: 100%; 
 }
-/* Resto de estilos CSS */
 
-  
-  
 
-  
-  /* Estilos para el formulario de seleccionar amigo */
-/* Estilos para el formulario de seleccionar amigo */
 label[for="amigo"],
 select#amigo,
 input#sms {
@@ -146,13 +139,11 @@ input#sms {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 10px;
-  height: 40px; /* Ajusta la altura según tus necesidades */
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+  height: 40px; 
+  box-sizing: border-box; 
 }
 
   
-  
-  /* Estilos para el formulario de enviar mensaje */
   input#sms {
     width: 50%;
     padding: 5px;

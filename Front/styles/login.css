@@ -42,7 +42,7 @@ input[type="password"] {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; /* Añade esta línea */
+  box-sizing: border-box;
 }
 
 button[name="but"] {
@@ -53,7 +53,7 @@ button[name="but"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  box-sizing: border-box; /* Añade esta línea */
+  box-sizing: border-box; 
 }
 
 button[name="but"]:hover {
@@ -68,7 +68,7 @@ button[name="but"]:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  box-sizing: border-box; /* Añade esta línea */
+  box-sizing: border-box; 
 }
 
 #alta:hover {

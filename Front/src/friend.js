@@ -10,7 +10,6 @@ function añadiramigos() {
     http.onreadystatechange = function () {
       if (http.readyState === XMLHttpRequest.DONE) {
         if (http.status === 200) {
-          // Obtener la respuesta del backend
           var response = http.responseText;
             if (response == '0') {
                 document.getElementById("resultado").innerHTML = 'El servidor no responde';
@@ -24,7 +23,6 @@ function añadiramigos() {
             }
           }
         } else {
-          // Error en la petición al backend
           console.error('Error en la petición al backend:', http.status);
         }
       
@@ -47,8 +45,6 @@ function recibiramigos() {
     if (http.readyState === XMLHttpRequest.DONE) {
       if (http.status === 200) {
         var responseData = http.responseText;
-
-        // Parse the response as JSON
         var parsedResponse;
         try {
           parsedResponse = JSON.parse(responseData);
@@ -56,38 +52,30 @@ function recibiramigos() {
         } catch (error) {
           console.error("Error parsing JSON response:", error);
         }
-
-        // Get the select element by its ID
         var selectElement = document.getElementById("amigo");
         var chatContainer = document.getElementById("chatContainer");
 
-        // Clear any existing options and divs
         selectElement.innerHTML = '';
         chatContainer.innerHTML = '';
 
-        // Check if the parsed response is an array
         if (Array.isArray(parsedResponse)) {
-          var addedFriends = []; // Array to store added friend names
+          var addedFriends = []; 
 
-          // Iterate over the JSON data and create options and divs
+
           parsedResponse.forEach(function (amigo, index) {
-            // Check if the friend name already exists in addedFriends
+
             if (!addedFriends.includes(amigo)) {
-              // Create an option element
+
               var option = document.createElement("option");
 
-              // Set the value and text content of the option using the friend name
               option.value = amigo;
               option.textContent = amigo;
 
-              // Append the option to the select element
               selectElement.appendChild(option);
 
-              // Add the friend name to addedFriends
               addedFriends.push(amigo);
             }
 
-            // Create a div for the chat
             var divChat = document.createElement("div");
             divChat.classList.add("conversacion");
             divChat.dataset.amigo = amigo;

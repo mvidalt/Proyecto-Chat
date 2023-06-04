@@ -51,7 +51,6 @@ function recibirMensaje() {
 
 
 
-// Llamar a la función recibirMensaje cada 5 segundos (5000 milisegundos)
 setInterval(recibirMensaje, 5000);
 
 
@@ -71,7 +70,7 @@ function enviarMensaje() {
             if (xhr.status === 200) {
                 console.log("Mensaje enviado correctamente");
 
-                var text = sms; // Obtener el texto del mensaje
+                var text = sms;
 
                 var conversacionElement = document.querySelector('.conversacion[data-amigo="' + receptor + '"]');
                 if (conversacionElement) {
@@ -97,10 +96,10 @@ function enviarMensaje() {
 }
 
 function mostrarCorreoUsuario() {
-    // Obtener el correo del usuario logeado
+
     var loggedMail = sessionStorage.getItem('mail');
   
-    // Mostrar el correo en algún elemento HTML
+
     var correoElement = document.getElementById('usuario');
     correoElement.textContent = 'Usuario: ' + loggedMail;
   }
