@@ -12,22 +12,26 @@
 
 <body onload="recibiramigos(); recibirMensaje()">
     <h1>Chat</h1>
+    <h2 id="usuario"></h2>
     <form>
         <label for="añadiramigo">Añadir email del amigo</label>
         <input type="email" id="friend" required>
         <button type="submit" onclick="añadiramigos()">Enviar solicitud</button>
+        <p id="resultado"></p>
     </form>
     <form>
-        <p id="resultado"></p>
-        <label for="amigo">A quien le quieres enviar el mensaje?</label>
-        <select id="amigo" required>
+        <button name="Logout" onclick="logout()">Cerrar sesión</button>
+        <label for="amigo">A quién le quieres enviar el mensaje?</label>
+        <select id="amigo" required onchange="cambiarConversacion()">
             <option value="" disabled selected>Selecciona un amigo</option>
         </select>
         <br><br>
         <input type="text" id="sms" required placeholder="Escribe un mensaje">
         <button name="but" type="button" onclick="enviarMensaje()">Enviar mensaje</button>
-        <div id="chatContainer"></div>
+        <div id="chatContainer">
+        </div>
     </form>
+    
 </body>
 
 </html>

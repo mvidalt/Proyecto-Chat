@@ -67,7 +67,7 @@ function recibiramigos() {
           // Check if the parsed response is an array
           if (Array.isArray(parsedResponse)) {
             // Iterate over the JSON data and create options and divs
-            parsedResponse.forEach(function (amigo) {
+            parsedResponse.forEach(function (amigo,index) {
               // Create an option element
               var option = document.createElement("option");
   
@@ -83,6 +83,13 @@ function recibiramigos() {
               divChat.classList.add("conversacion");
               divChat.dataset.amigo = amigo;
               chatContainer.appendChild(divChat);
+              if (index === 0) {
+                divChat.style.display = "block";
+              } else {
+                divChat.style.display = "none";
+              }
+
+              
             });
           } else {
             console.error("Invalid response format. Expected an array.");
