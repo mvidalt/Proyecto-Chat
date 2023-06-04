@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 import org.json.JSONObject;
 import jakarta.servlet.ServletException;
@@ -37,20 +36,18 @@ public class Xat extends HttpServlet {
 		if (u.isLogged()) {
 			sms = new Missatge();
 			sms.setReceptor(mail);
-			do {
-				try {
-					TimeUnit.SECONDS.sleep((long)1);
-				} catch (InterruptedException e) {
-					System.out.println("Error al sleep");
-				}
-				sms.getMissatge();
-			}while(sms.getText()==null);
+			sms.getMissatge();
 		}
 		
-		JSONObject json = new JSONObject(sms);
-		String stringJson = json.toString();
-		
-		response.getWriter().append(stringJson);
+		if (sms != null && sms.getId() != 0) {
+	        JSONObject json = new JSONObject(sms);
+	        String stringJson = json.toString();
+
+	        response.getWriter().append(stringJson);
+	        System.out.println(stringJson);
+	    } else {
+	        response.getWriter().append("[]");
+	    }
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

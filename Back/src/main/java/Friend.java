@@ -28,10 +28,11 @@ public class Friend extends HttpServlet {
 		String mail = request.getParameter("mail");
 		String session = request.getParameter("session");
 		String friendMail = request.getParameter("friend");
-		System.out.print(friendMail);
+		
 		User u = new User();
 		u.setMail(mail);
 		u.setSession(session);
+		
 		String resposta="0";
 		//Codi resposta
 		//0 El Servidor no respon
@@ -58,7 +59,7 @@ public class Friend extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String mail = request.getParameter("mail");
 		String session = request.getParameter("session");
-		
+		System.out.print(mail+session);
 		User u = new User();
 		u.setMail(mail);
 		u.setSession(session);

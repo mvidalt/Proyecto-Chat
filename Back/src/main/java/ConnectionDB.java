@@ -104,6 +104,8 @@ public class ConnectionDB {
 				u.setPass(rs.getString("pass"));
 				u.setCodeCountry(rs.getString("country"));
 				u.setLastLog(rs.getDate("last_log").toLocalDate());
+				System.out.println(rs.getDate("last_log").toLocalDate());
+				System.out.println(u.getLastLog());
 			}
 			if (u.getLastLog().equals(LocalDate.now())) {
 				resposta=true;
@@ -195,6 +197,7 @@ public class ConnectionDB {
 	}
 	
 	public void saveMessage(Missatge sms) {
+		System.out.println(sms.getEmisor());
 		String query = "INSERT INTO message (origen,desti,text) VALUES ('"+sms.getEmisor()+"','"+sms.getReceptor()+"','"+sms.getText()+"');";
 		try {
 			st.executeUpdate(query);
