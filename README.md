@@ -1,8 +1,10 @@
 # Proyecto-Chat
 
-El objetivo del proyecto es crear un chat en el que se pueda iniciar sesión, agregar a otros usuarios, que los usuarios envien mensajes y se actualice la respuesta a tiempo real 
+El objetivo del proyecto es crear un chat en el que se pueda iniciar sesión, agregar a otros usuarios, que los usuarios envien mensajes y puedan chatear a "tiempo real" 
  
-La pagina tendrá una pagina para iniciar sesión, otra para registrarse por si no tienes una cuenta, un la pagina principal del chat donde se podra agregar a un nuevo amigo, seleccionar 
+ ⚠️ OJO he modificado un poco el backend a mi manera ⚠️
+
+La web tendrá una pagina para iniciar sesión, otra para registrarse por si no tienes una cuenta, una pagina donde se podra agregar a un nuevo amigo, seleccionar 
 con la persona que quieres hablar y una sección donde se mostrara el chat entre las dos persoans
 
 ## Funcionamiento General
