@@ -61,6 +61,11 @@ function enviarMensaje() {
     var receptor = document.getElementById("amigo").value;
     var sms = document.getElementById("sms").value;
 
+    if (sms.trim() === "") {
+      alert("El mensaje está vacío, escribe algo porfavor");
+      return;
+  }
+
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost:3000/XatLLM/Xat", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -79,9 +84,6 @@ function enviarMensaje() {
                   mensaje.classList.add('sent');
                   conversacionElement.appendChild(mensaje);
                   
-                 
- 
-                  
                 }
             } else {
                 console.error("Error al enviar el mensaje:", xhr.status);
@@ -96,13 +98,18 @@ function enviarMensaje() {
 }
 
 function mostrarCorreoUsuario() {
+  var loggedMail = sessionStorage.getItem('mail');
 
-    var loggedMail = sessionStorage.getItem('mail');
-  
-
-    var correoElement = document.getElementById('usuario');
-    correoElement.textContent = 'Usuario: ' + loggedMail;
+  if (loggedMail === null) {
+      alert("No has iniciado sesión.");
+      window.location.href = "login.html";
+      return;
   }
+
+  var correoElement = document.getElementById('usuario');
+  correoElement.textContent = 'Usuario: ' + loggedMail;
+}
+
 
   window.addEventListener('load', mostrarCorreoUsuario);
 

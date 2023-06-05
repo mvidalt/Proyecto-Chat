@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #075e54;
     padding: 10px;
     color: #fff;
   }
@@ -67,7 +67,7 @@ body {
   .friend {
     display: flex;
     align-items: center;
-    background-color: #333;
+    background-color: #075e54;;
     color: #fff;
     border: none;
     padding: 5px;

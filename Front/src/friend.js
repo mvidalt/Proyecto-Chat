@@ -14,8 +14,9 @@ function añadiramigos() {
             if (response == '0') {
                 document.getElementById("resultado").innerHTML = 'El servidor no responde';
             } else if (response == '1') {
-                document.getElementById("resultado").innerHTML = 'Amigo agregado correctamente';
+                alert('Amigo agregado correctamente');
                 document.getElementById("friend").value;
+                window.location.reload();
             } else if (response == '2') {
                 document.getElementById("resultado").innerHTML = 'Amigo no encontrado';
             } else if (response == '3') {
@@ -59,33 +60,30 @@ function recibiramigos() {
         chatContainer.innerHTML = '';
 
         if (Array.isArray(parsedResponse)) {
-          var addedFriends = []; 
+          var addedFriendsSet = new Set(); // Utilizar un objeto Set para almacenar amigos únicos
 
+          parsedResponse.forEach(function (amigo) {
+            addedFriendsSet.add(amigo); // Agregar amigo al conjunto
+          });
 
-          parsedResponse.forEach(function (amigo, index) {
-
-            if (!addedFriends.includes(amigo)) {
-
-              var option = document.createElement("option");
-
-              option.value = amigo;
-              option.textContent = amigo;
-
-              selectElement.appendChild(option);
-
-              addedFriends.push(amigo);
-            }
+          addedFriendsSet.forEach(function (amigo) { // Iterar sobre los amigos únicos en el conjunto
+            var option = document.createElement("option");
+            option.value = amigo;
+            option.textContent = amigo;
+            selectElement.appendChild(option);
 
             var divChat = document.createElement("div");
             divChat.classList.add("conversacion");
             divChat.dataset.amigo = amigo;
             chatContainer.appendChild(divChat);
-            if (index === 0) {
-              divChat.style.display = "block";
-            } else {
-              divChat.style.display = "none";
-            }
+            divChat.style.display = "none"; // Ocultar todos los divs inicialmente
           });
+
+          // Mostrar el primer div
+          var firstDivChat = chatContainer.firstChild;
+          if (firstDivChat) {
+            firstDivChat.style.display = "block";
+          }
         } else {
           console.error("Invalid response format. Expected an array.");
         }
@@ -97,6 +95,7 @@ function recibiramigos() {
 
   http.send();
 }
+
 
 
   
